@@ -1,6 +1,6 @@
-﻿using UnityEngine;
 using GameFramework.Event;
 using UnityGameFramework.Runtime;
+
 [Obfuz.ObfuzIgnore(Obfuz.ObfuzScope.TypeName)]
 public partial class MenuUIForm : UIFormBase
 {
@@ -8,58 +8,49 @@ public partial class MenuUIForm : UIFormBase
     {
         base.OnOpen(userData);
         GF.Event.Subscribe(PlayerDataChangedEventArgs.EventId, OnUserDataChanged);
+        GF.Event.Subscribe(LoadDictionarySuccessEventArgs.EventId, OnLanguageReloaded);
         RefreshMoneyText();
+
         var uiparms = UIParams.Create();
         uiparms.Set<VarBoolean>(UITopbar.P_EnableBG, true);
         uiparms.Set<VarBoolean>(UITopbar.P_EnableSettingBtn, true);
-        this.OpenSubUIForm(UIViews.Topbar, 1, uiparms);
-    }
-    protected override void OnUpdate(float elapseSeconds, float realElapseSeconds)
-    {
-        base.OnUpdate(elapseSeconds, realElapseSeconds);
-
+        OpenSubUIForm(UIViews.Topbar, 1, uiparms);
     }
 
     protected override void OnClose(bool isShutdown, object userData)
     {
         GF.Event.Unsubscribe(PlayerDataChangedEventArgs.EventId, OnUserDataChanged);
+        GF.Event.Unsubscribe(LoadDictionarySuccessEventArgs.EventId, OnLanguageReloaded);
         base.OnClose(isShutdown, userData);
     }
-
 
     protected override void OnButtonClick(object sender, string btId)
     {
         base.OnButtonClick(sender, btId);
-        switch (btId)
+        if (btId == "SETTING")
         {
-            case "SETTING":
-                GF.UI.OpenUIForm(UIViews.SettingDialog);
-                break;
+            GF.UI.OpenUIForm(UIViews.SettingDialog);
         }
     }
 
-    private void OnUserDataChanged(object sender, GameEventArgs e)
+    private void OnUserDataChanged(object sender, GameFramework.Event.GameEventArgs e)
     {
         var args = e as PlayerDataChangedEventArgs;
-        switch (args.DataType)
+        if (args.DataType == PlayerDataType.Coins)
         {
-            case PlayerDataType.Coins:
-                RefreshMoneyText();
-                break;
-            case PlayerDataType.LevelId:
-
-                break;
+            RefreshMoneyText();
         }
     }
-
 
     private void RefreshMoneyText()
     {
         var playerDm = GF.DataModel.GetOrCreate<PlayerDataModel>();
-        SetMoneyText(playerDm.Coins);
+        var coinText = UtilityBuiltin.Valuer.ToCoins(playerDm.Coins);
+        moneyText.text = GF.Localization.GetString("FlipRun.MenuTips", coinText);
     }
-    private void SetMoneyText(int money)
+
+    private void OnLanguageReloaded(object sender, GameEventArgs e)
     {
-        moneyText.text = UtilityBuiltin.Valuer.ToCoins(money);
+        RefreshMoneyText();
     }
 }

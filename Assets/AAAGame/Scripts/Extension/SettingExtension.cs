@@ -45,7 +45,7 @@ public static class SettingExtension
 
         if (!System.Enum.TryParse(lan, out GameFramework.Localization.Language language))
         {
-            language = GameFramework.Localization.Language.English;
+            language = GameFramework.Localization.Language.ChineseSimplified;
         }
         return language;
     }

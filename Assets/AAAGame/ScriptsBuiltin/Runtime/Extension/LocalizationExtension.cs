@@ -26,7 +26,20 @@ public static class LocalizationExtension
     /// <returns></returns>
     public static string GetText(this LocalizationComponent com, string key, params object[] parms)
     {
-        return com.GetString(key, parms);
+        string format = com.GetText(key);
+        if (parms == null || parms.Length == 0)
+        {
+            return format;
+        }
+
+        try
+        {
+            return string.Format(format, parms);
+        }
+        catch
+        {
+            return format;
+        }
     }
     /// <summary>
     /// 获取本地化文本,并转换大小写
@@ -53,7 +66,7 @@ public static class LocalizationExtension
     /// <returns></returns>
     public static string GetText(this LocalizationComponent com, string key, bool toUpperOrLower, params object[] parms)
     {
-        string result = com.GetString(key, parms);
+        string result = com.GetText(key, parms);
         if (com.Language == Language.English)
             return toUpperOrLower ? result.ToUpper() : result.ToLower();
 
