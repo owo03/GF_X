@@ -88,6 +88,7 @@
     <Compile Include="Assets\AAAGame\ScriptsBuiltin\Editor\Common\ConstEditor.cs" />
     <Compile Include="Assets\AAAGame\ScriptsBuiltin\Editor\UI\UIFormBaseInspector.cs" />
     <Compile Include="Assets\AAAGame\ScriptsBuiltin\Editor\DataTableGenerator\DataTableProcessor.DecimalProcessor.cs" />
+    <Compile Include="Assets\AAAGame\ScriptsBuiltin\Editor\FlipRunConfigInspector.cs" />
     <Compile Include="Assets\AAAGame\ScriptsBuiltin\Editor\DataTableGenerator\DataTableProcessor.IntArrayProcessor.cs" />
     <Compile Include="Assets\AAAGame\ScriptsBuiltin\Editor\DataTableGenerator\DataTableProcessor.SByteProcessor.cs" />
     <Compile Include="Assets\AAAGame\ScriptsBuiltin\Editor\ResourceRuleEditor\ResourceRuleEditor.cs" />

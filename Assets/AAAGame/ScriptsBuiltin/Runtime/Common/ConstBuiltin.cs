@@ -32,5 +32,17 @@ public static class ConstBuiltin
         /// A/B测试组
         /// </summary>
         public readonly static string ABTestGroup = "Setting.ABTestGroup";
+        /// <summary>
+        /// 窗口分辨率宽
+        /// </summary>
+        public readonly static string ResolutionWidth = "Setting.ResolutionWidth";
+        /// <summary>
+        /// 窗口分辨率高
+        /// </summary>
+        public readonly static string ResolutionHeight = "Setting.ResolutionHeight";
+        /// <summary>
+        /// 是否全屏
+        /// </summary>
+        public readonly static string FullScreen = "Setting.FullScreen";
     }
 }

@@ -40,6 +40,6 @@ public class GameOverProcedure : ProcedureBase
 
     internal void BackHome()
     {
-        ChangeState<MenuProcedure>(procedure);
+        ChangeState<GameProcedure>(procedure);
     }
 }

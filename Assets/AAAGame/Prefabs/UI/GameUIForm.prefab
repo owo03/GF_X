@@ -33,10 +33,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 4244703309992114762}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 50}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 175, y: -32}
+  m_SizeDelta: {x: 100, y: 50}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!222 &2510973534486919424
 CanvasRenderer:
@@ -234,9 +234,12 @@ MonoBehaviour:
     - {fileID: 648416522645630717}
     VarType: TMPro.TextMeshProUGUI
     VarPrefix: 0
-  topBar: {fileID: 1723033201729535971}
+  m_UIAnimationType: 0
   m_OpenAnimation: {fileID: 0}
   m_CloseAnimation: {fileID: 0}
+  m_ReverseOpenAnimAsClose: 1
+  m_OpenAnimationName: 
+  m_CloseAnimationName: 
   coinNumText: {fileID: 1366724547245885076}
 --- !u!1 &1723033201729535970
 GameObject:
@@ -253,7 +256,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1723033201729535971
 RectTransform:
   m_ObjectHideFlags: 0
@@ -346,7 +349,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -60, y: -70}
-  m_SizeDelta: {x: 0, y: 100}
+  m_SizeDelta: {x: 195, y: 100}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &5904768125005972391
 MonoBehaviour:

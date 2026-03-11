@@ -82,6 +82,8 @@
     <Compile Include="Assets\AAAGame\Scripts\Extension\DataModel\DataModelBase.cs" />
     <Compile Include="Assets\AAAGame\Scripts\Entity\Core\EntityParams.cs" />
     <Compile Include="Assets\AAAGame\Scripts\Procedures\PreloadProcedure.cs" />
+    <Compile Include="Assets\AAAGame\Scripts\MessageBox\MessageBoxesSystem.cs" />
+    <Compile Include="Assets\AAAGame\Scripts\ScriptableObject\FlipRunConfig.cs" />
     <Compile Include="Assets\AAAGame\Scripts\UI\UIVariables\ToastTips.Variables.cs" />
     <Compile Include="Assets\AAAGame\Scripts\Entity\BulletEntity.cs" />
     <Compile Include="Assets\AAAGame\Scripts\Network\PacketHeaderBase.cs" />
@@ -102,6 +104,7 @@
     <Compile Include="Assets\AAAGame\Scripts\Entity\LevelEntity.cs" />
     <Compile Include="Assets\AAAGame\Scripts\Extension\LocalizationExtension.cs" />
     <Compile Include="Assets\AAAGame\Scripts\UI\GameOverUIForm.cs" />
+    <Compile Include="Assets\AAAGame\Scripts\MessageBox\MessageBox.cs" />
     <Compile Include="Assets\AAAGame\Scripts\UI\Core\UIFormBase.cs" />
     <Compile Include="Assets\AAAGame\Scripts\Extension\Animation\AnimationExtension.cs" />
     <Compile Include="Assets\AAAGame\Scripts\Extension\DataModel\DataModelStorageBase.cs" />
@@ -128,9 +131,6 @@
     <Compile Include="Assets\AAAGame\Scripts\Extension\DataTableExtension.cs" />
     <Compile Include="Assets\AAAGame\Scripts\Network\PacketHandler\SCHeartBeatHandler.cs" />
     <Compile Include="Assets\AAAGame\Scripts\UI\CommonDialog.cs" />
-    <Compile Include="Assets\AAAGame\Scripts\UI\MessageBox.cs" />
-    <Compile Include="Assets\AAAGame\Scripts\UI\MessageBoxesSystem.cs" />
-    <Compile Include="Assets\AAAGame\Scripts\UI\MessageBoxTrigger.cs" />
     <Compile Include="Assets\AAAGame\Scripts\DataTable\TestTable.cs" />
     <Compile Include="Assets\AAAGame\Scripts\UI\GameUIForm.cs" />
     <Compile Include="Assets\AAAGame\Scripts\Demo\Spawnner.cs" />
@@ -150,11 +150,13 @@
     <Compile Include="Assets\AAAGame\Scripts\Network\CSPacketHeader.cs" />
     <Compile Include="Assets\AAAGame\Scripts\Demo\JobsPhysics.cs" />
     <Compile Include="Assets\AAAGame\Scripts\Entity\SampleEntity.cs" />
+    <Compile Include="Assets\AAAGame\Scripts\Extension\DisplaySettingsExtension.cs" />
     <Compile Include="Assets\AAAGame\Scripts\DataTable\Core\UIGroupTable.cs" />
     <Compile Include="Assets\AAAGame\Scripts\Procedures\GameProcedure.cs" />
     <Compile Include="Assets\AAAGame\Scripts\EventArgs\GameplayEventArgs.cs" />
     <Compile Include="Assets\AAAGame\Scripts\Extension\SoundExtension.cs" />
     <Compile Include="Assets\AAAGame\Scripts\Extension\StaticUIComponent.cs" />
+    <Compile Include="Assets\AAAGame\Scripts\MessageBox\MessageBoxTrigger.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\AAAGame\Scripts\Hotfix.asmdef" />
